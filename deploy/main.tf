@@ -45,12 +45,12 @@ variable "runner_lambda_name" {
 
 variable "runner_repo_uri" {
     description = "Repo URI to use for Lambda Runner (only if you want a custom version)"
-    default = "public.ecr.aws/n9q0k4a8"
+    default = "ghcr.io/fgregg"
 }
 
 variable "runner_image_uri" {
     description = "Image URI to use for Lambda Runner (only change if you want a custom version)"
-    default = "public.ecr.aws/n9q0k4a8/lambda-github-runner:latest"
+    default = "ghcr.io/fgregg/lambda-github-runner:latest"
 }
 
 variable "runner_timeout" {

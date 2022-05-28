@@ -94,7 +94,7 @@ func HandleRequest(ctx context.Context, event RunnerEvent) (string, error) {
 		fmt.Println("Creating default runner")
 	}
 
-	configcmd := exec.Command("/tmp/runner/config.sh", "--url", event.RepoURL, "--token", regToken.Token, "--name", runnerName, "--runnergroup", "lambda", "--labels", "lambda", "--work", "_work", "--replace")
+	configcmd := exec.Command("/tmp/runner/config.sh", "--url", event.RepoURL, "--token", regToken.Token, "--name", runnerName, "--labels", "lambda", "--work", "_work", "--replace")
 	out, err := configcmd.Output()
 	if err != nil {
 		fmt.Println(string(out), err)

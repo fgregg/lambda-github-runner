@@ -1,6 +1,6 @@
 resource "null_resource" "lambda_github_runner_pull_image" {
     provisioner "local-exec" {
-        command = "aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${var.runner_repo_uri} && docker pull ${var.runner_image_uri}"
+        command = "docker pull ${var.runner_image_uri}"
     }
 }
 
