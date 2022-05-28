@@ -9,7 +9,7 @@ RUN go mod download
 ADD main.go .
 RUN go build -o /main
 
-FROM debian:buster-slim
+FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG GIT_VERSION="2.26.2"
